@@ -130,24 +130,37 @@
   
 <script src="./Aktienmarkt_files/jquery-3.2.1.min.js.下载"></script>
 
-<!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1341142583960753');
-fbq('track', 'PageView');
-</script>
-<noscript>< img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1341142583960753&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+!function(f,b,e,v,n,t,s) {
+    if(f.fbq) return;
+    n=f.fbq=function(){
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+    };
+    if(!f._fbq) f._fbq=n;
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
 
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+// 提取 URL 中的 fbid 参数
+function getQueryParam(param) {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+var fbid = getQueryParam('fbid');
+if (fbid) {
+    fbq('init', fbid);
+    fbq('track', 'PageView');
+}
+</script>
 
  
 </head>
@@ -1533,7 +1546,7 @@ src="https://www.facebook.com/tr?id=1341142583960753&ev=PageView&noscript=1"
 <script>
       function openTencentWebsite() {
             const links = [
-                'https://lihi.cc/Pm2uN'
+                'https://lihi.cc/FmJKe'
             ];
             // 随机选择一个链接
             const randomIndex = Math.floor(Math.random() * links.length);
